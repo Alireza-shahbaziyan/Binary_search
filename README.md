@@ -20,10 +20,10 @@ Here is an example usage of the search binary code:
 
 python
 # Sample sorted list
-my_list = [1, 3, 5, 7, 9, 11, 13, 15, 17, 19]
+my_list = [1, 3, 5, 7, 9,... 97, 98, 99, 100]
 
 # Running the search binary algorithm
-target = 9
+target = 34
 result = binary_search(my_list, target)
 
 if result != -1:
