@@ -1,30 +1,20 @@
-const listNumber = Array.from(Array(100).keys())
-
-
-const BinarySearch = (list, num) => {
-    var count =  0
-    let low = 0
-    let hight = list.length - 1
+export default BinarySearch = (list, num) => {
+    let count =  0
+    var low = list[0]
+    var hight =  list.length -1 
     while (low <= hight) {
-        console.log(list);
-        count++
-        let mid = (list + hight) /2
-        let quess = list[mid]
-        console.log(quess);
-        if (quess == num) {
-            console.log( `${mid} count:${count}`);
+        count+=1
+        let mid = Math.round((low + hight)/2)
+        if (list[mid] == num) {
+            console.log(`your number is ${list[mid]}`);
             break
         }
-        if (quess > num) {
-            hight = mid -1
-            console.log('hight = mid -1');
-        }
-        else{
+        if (list[mid] < num) {
             low = mid + 1
         }
-
+        else{
+            hight = mid + 1
+        }
     }
-
+    console.log(count);
 }
-
-BinarySearch(listNumber,34)
